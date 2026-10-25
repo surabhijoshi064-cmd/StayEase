@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservation Confirmed | StayEase</title>
+  <meta name="description" content="Sample booking confirmation for The Cedar Sanctuary &amp; Spa. Pure HTML &amp; CSS demonstration.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Static Prototype Demonstration Banner -->
+  <aside class="demo-banner" aria-label="Prototype announcement">
+    <div class="demo-banner-content">
+      <span class="demo-tag">Demonstration Complete</span>
+      <span>This is a static frontend confirmation screen. In a full production application, this page would receive data from a backend reservation system.</span>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="StayEase Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Stay<span>Ease</span></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="results.html">Destinations</a>
+        <a href="results.html">Hotels</a>
+        <a href="hotel.html">Sanctuary Details</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="index.html" class="btn btn-outline btn-sm">Return Home</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container section" style="padding-top: var(--space-10);">
+    
+    <div class="confirmation-card">
+      
+      <!-- Celebratory Success Icon -->
+      <div class="success-icon-badge" aria-hidden="true">
+        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+
+      <span class="eyebrow">Reservation Confirmed</span>
+      <h1 style="font-size: clamp(1.8rem, 3vw + 1rem, 2.6rem); margin-bottom: var(--space-2);">Your sanctuary awaits you.</h1>
+      <p class="lead" style="margin-bottom: var(--space-4);">
+        Thank you for booking with StayEase. An email confirmation has been prepared for your upcoming trip to Kyoto.
+      </p>
+
+      <!-- Booking Reference Pill -->
+      <div>
+        <span style="font-size: 0.82rem; color: var(--color-text-muted); text-transform: uppercase; font-weight: 700; letter-spacing: 0.05em; display: block;">
+          Booking Reference Code
+        </span>
+        <div class="booking-ref-pill">#STE-84920-KYT</div>
+      </div>
+
+      <!-- Itemized Itinerary Summary Grid -->
+      <div class="itinerary-details-grid">
+        <div class="itinerary-item">
+          <span>Hotel Property</span>
+          <strong>The Cedar Sanctuary &amp; Spa</strong>
+          <small style="color: var(--color-text-muted);">Higashiyama, Kyoto, Japan</small>
+        </div>
+
+        <div class="itinerary-item">
+          <span>Suite Reserved</span>
+          <strong>Cedar Garden Suite</strong>
+          <small style="color: var(--color-text-muted);">1 King Bed &bull; Private Cypress Tub</small>
+        </div>
+
+        <div class="itinerary-item">
+          <span>Check-in Date</span>
+          <strong>Saturday, Oct 24, 2026</strong>
+          <small style="color: var(--color-text-muted);">From 3:00 PM</small>
+        </div>
+
+        <div class="itinerary-item">
+          <span>Check-out Date</span>
+          <strong>Wednesday, Oct 28, 2026</strong>
+          <small style="color: var(--color-text-muted);">Until 11:00 AM (4 nights)</small>
+        </div>
+
+        <div class="itinerary-item">
+          <span>Guests</span>
+          <strong>2 Adults</strong>
+          <small style="color: var(--color-text-muted);">Eleanor Vance (Primary Guest)</small>
+        </div>
+
+        <div class="itinerary-item">
+          <span>Total Example Amount</span>
+          <strong style="color: var(--color-accent); font-size: 1.15rem;">$1,496.00 USD</strong>
+          <small style="color: var(--color-success); font-weight: 600;">All local fees &amp; taxes included</small>
+        </div>
+      </div>
+
+      <!-- Important Guidance Details -->
+      <div style="text-align: left; background-color: var(--color-surface-subtle); border-radius: var(--radius-md); padding: var(--space-5); margin-bottom: var(--space-6); border: 1px solid var(--color-border-subtle); font-size: 0.92rem;">
+        <h3 style="font-size: 1.1rem; margin-bottom: var(--space-2); color: var(--color-brand-deep);">
+          Important check-in guidance
+        </h3>
+        <ul style="padding-left: var(--space-4); display: flex; flex-direction: column; gap: var(--space-2); color: var(--color-text-secondary);">
+          <li>
+            <strong>Arrival &amp; Luggage:</strong> Complimentary luggage drop-off is available at the front desk anytime before 3:00 PM on the day of check-in.
+          </li>
+          <li>
+            <strong>Organic Breakfast:</strong> Prepared daily in the dining pavilion from 7:00 AM to 10:30 AM (dietary preferences noted).
+          </li>
+          <li>
+            <strong>Complimentary Cancellation Window:</strong> Modifiable or cancellable without charge until 3:00 PM JST on October 22, 2026.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Demonstration Note -->
+      <div class="callout-box" style="text-align: left; margin-bottom: var(--space-6);" role="note">
+        <strong>Demo Prototype Note:</strong>
+        This reservation was generated for evaluation of the pure HTML &amp; CSS interface. No charge was submitted to a payment network and no real room was booked.
+      </div>
+
+      <!-- Navigation & Actions -->
+      <div style="display: flex; gap: var(--space-3); justify-content: center; flex-wrap: wrap;">
+        <a href="index.html" class="btn btn-primary btn-lg">
+          Return to StayEase Home
+        </a>
+        <a href="results.html" class="btn btn-outline btn-lg">
+          Explore Other Destinations
+        </a>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:28px; height:28px; color: var(--color-accent);" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Stay<span>Ease</span></span>
+          </a>
+          <p>Thoughtfully curated boutique hotels and sanctuary retreats. Pure HTML &amp; CSS Demonstration.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="results.html">All Destinations</a></li>
+            <li><a href="hotel.html">Featured Retreats</a></li>
+            <li><a href="results.html">Thermal Spas &amp; Onsens</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#why-stayease">About StayEase</a></li>
+            <li><a href="index.html#why-stayease">Hospitality Criteria</a></li>
+            <li><a href="reservation.html">Reservation Guarantee</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Reservation Support</h4>
+          <ul class="footer-links">
+            <li><a href="reservation.html">Booking Guide</a></li>
+            <li><a href="hotel.html#policies">Cancellation Policies</a></li>
+            <li><a href="confirmation.html">Sample Itinerary</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 StayEase Hospitality Inc. Pure HTML &amp; CSS Frontend Architecture.
+        </div>
+        <ul class="footer-bottom-links">
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#cookies">Cookie Preferences</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

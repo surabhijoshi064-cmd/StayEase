@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results - Kyoto Stays | StayEase</title>
+  <meta name="description" content="Explore tranquil hotels and boutique retreats in Kyoto, Japan. Filter by amenities, guest rating, and price.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Static Prototype Demonstration Banner -->
+  <aside class="demo-banner" aria-label="Prototype announcement">
+    <div class="demo-banner-content">
+      <span class="demo-tag">HTML &amp; CSS Only</span>
+      <span>Search parameters and filter checkboxes illustrate native styling and accessibility. They showcase frontend markup without dynamic script manipulation.</span>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="StayEase Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Stay<span>Ease</span></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="results.html" class="active" aria-current="page">Destinations</a>
+        <a href="results.html">Hotels</a>
+        <a href="index.html#popular-stays">Featured Stays</a>
+        <a href="index.html#why-stayease">Why StayEase</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="index.html" class="sign-in-link">Sign in</a>
+        <a href="hotel.html" class="btn btn-primary btn-sm">Featured Hotel</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Results Header Bar with Search Summary -->
+    <section class="results-header-bar" aria-label="Current search summary">
+      <div class="container">
+        <div class="results-meta-row">
+          <div class="results-summary-text">
+            <span class="eyebrow" style="margin-bottom: 0;">Verified Accommodations</span>
+            <h1>Hotels in Kyoto, Japan</h1>
+            <div class="search-chips" style="margin-top: 0.5rem;">
+              <span class="chip">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                Kyoto, Japan
+              </span>
+              <span class="chip">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                Oct 24 &ndash; Oct 28, 2026 (4 nights)
+              </span>
+              <span class="chip">
+                <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                2 Guests, 1 Room
+              </span>
+            </div>
+          </div>
+          <div>
+            <a href="index.html" class="btn btn-outline btn-sm">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
+              Modify search
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Results Layout (Filter Sidebar + Listings) -->
+    <div class="container section" style="padding-top: var(--space-6);">
+      <div class="results-layout">
+        
+        <!-- Filter Sidebar -->
+        <aside class="filters-sidebar" aria-label="Search filters">
+          
+          <!-- Visual Map Overview Card -->
+          <div class="map-placeholder-card">
+            <svg class="map-svg-graphic" viewBox="0 0 240 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Illustrated Kyoto region map with location pins">
+              <!-- Stylized map background -->
+              <rect width="240" height="120" rx="8" fill="#dce6e9"/>
+              <!-- Stylized river curve -->
+              <path d="M 0,70 Q 70,40 120,65 T 240,50" stroke="#b2cfd8" stroke-width="16" fill="none" stroke-linecap="round"/>
+              <path d="M 120,65 Q 150,95 190,120" stroke="#b2cfd8" stroke-width="12" fill="none"/>
+              <!-- Green zones / parks -->
+              <path d="M 15 20 Q 40 10 60 28 T 80 50 Q 50 60 20 40 Z" fill="#cde2d3" opacity="0.8"/>
+              <path d="M 170 15 Q 210 5 225 30 T 210 55 Q 160 40 170 15 Z" fill="#cde2d3" opacity="0.8"/>
+              <!-- Location pins -->
+              <g transform="translate(45, 30)">
+                <circle cx="0" cy="0" r="14" fill="#c05835"/>
+                <text x="0" y="4" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">$340</text>
+              </g>
+              <g transform="translate(135, 45)">
+                <circle cx="0" cy="0" r="14" fill="#173832"/>
+                <text x="0" y="4" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">$295</text>
+              </g>
+              <g transform="translate(190, 75)">
+                <circle cx="0" cy="0" r="14" fill="#173832"/>
+                <text x="0" y="4" text-anchor="middle" fill="#fff" font-size="9" font-weight="bold">$410</text>
+              </g>
+            </svg>
+            <div class="map-badge">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+              </svg>
+              <span>Kyoto Map Area (Static Preview)</span>
+            </div>
+          </div>
+
+          <form action="results.html" method="get">
+            <!-- Filter Header -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--space-4); padding-bottom: var(--space-3); border-bottom: 1px solid var(--color-border-subtle);">
+              <h2 style="font-size: 1.15rem; margin: 0;">Filters</h2>
+              <a href="results.html" style="font-size: 0.8rem; color: var(--color-accent); font-weight: 600;">Reset all</a>
+            </div>
+
+            <!-- Price Filter Section -->
+            <fieldset class="filter-section">
+              <legend class="filter-title">Price per night</legend>
+              <div class="filter-group">
+                <label class="filter-label">
+                  <input type="checkbox" name="price" value="under-200">
+                  <span>Under $200</span>
+                  <span class="filter-count">(2)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="price" value="200-350" checked>
+                  <span>$200 &ndash; $350</span>
+                  <span class="filter-count">(6)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="price" value="350-500" checked>
+                  <span>$350 &ndash; $500</span>
+                  <span class="filter-count">(4)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="price" value="500-plus">
+                  <span>$500+ Luxury</span>
+                  <span class="filter-count">(2)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Star Rating Section -->
+            <fieldset class="filter-section">
+              <legend class="filter-title">Property Star Rating</legend>
+              <div class="filter-group">
+                <label class="filter-label">
+                  <input type="checkbox" name="stars" value="5" checked>
+                  <span style="color: var(--color-star); font-weight: bold;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  <span>5-Star Sanctuary</span>
+                  <span class="filter-count">(5)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="stars" value="4" checked>
+                  <span style="color: var(--color-star); font-weight: bold;">&#9733;&#9733;&#9733;&#9733;</span>
+                  <span>4-Star Boutique</span>
+                  <span class="filter-count">(7)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="stars" value="3">
+                  <span style="color: var(--color-star); font-weight: bold;">&#9733;&#9733;&#9733;</span>
+                  <span>3-Star Heritage</span>
+                  <span class="filter-count">(2)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Guest Rating Section -->
+            <fieldset class="filter-section">
+              <legend class="filter-title">Guest Review Score</legend>
+              <div class="filter-group">
+                <label class="filter-label">
+                  <input type="radio" name="guest_rating" value="all">
+                  <span>Any score</span>
+                </label>
+                <label class="filter-label">
+                  <input type="radio" name="guest_rating" value="9.5" checked>
+                  <span>9.5+ Exceptional</span>
+                  <span class="filter-count">(4)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="radio" name="guest_rating" value="9.0">
+                  <span>9.0+ Superb</span>
+                  <span class="filter-count">(9)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="radio" name="guest_rating" value="8.5">
+                  <span>8.5+ Very Good</span>
+                  <span class="filter-count">(14)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <!-- Amenities Section -->
+            <fieldset class="filter-section">
+              <legend class="filter-title">Tranquil Amenities</legend>
+              <div class="filter-group">
+                <label class="filter-label">
+                  <input type="checkbox" name="amenity" value="onsen" checked>
+                  <span>Thermal Bath / Onsen</span>
+                  <span class="filter-count">(8)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="amenity" value="breakfast" checked>
+                  <span>Artisanal Breakfast</span>
+                  <span class="filter-count">(11)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="amenity" value="wifi" checked>
+                  <span>High-speed Wi-Fi</span>
+                  <span class="filter-count">(14)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="amenity" value="garden">
+                  <span>Private Zen Garden</span>
+                  <span class="filter-count">(6)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="amenity" value="spa">
+                  <span>Holistic Spa / Sauna</span>
+                  <span class="filter-count">(7)</span>
+                </label>
+                <label class="filter-label">
+                  <input type="checkbox" name="amenity" value="parking">
+                  <span>Valet &amp; Parking</span>
+                  <span class="filter-count">(5)</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn-forest btn-block btn-sm" style="margin-top: var(--space-4);">
+              Update Results
+            </button>
+          </form>
+        </aside>
+
+        <!-- Listings Content Column -->
+        <section aria-label="Available hotels">
+          
+          <!-- Results Controls Row (Count & Sorting) -->
+          <div class="results-controls-row">
+            <div class="results-count">
+              Showing <strong>4</strong> of <strong>14</strong> curated stays in Kyoto
+            </div>
+
+            <div class="results-sorting">
+              <label for="results-sort">Sort by:</label>
+              <select id="results-sort" name="sort">
+                <option value="recommended" selected>StayEase Recommended</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Guest Rating: Highest first</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Hotel Card 1 (Featured Match) -->
+          <div class="hotel-list">
+            
+            <article class="hotel-card">
+              <div class="hotel-card-media">
+                <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=700&q=80" alt="Exterior courtyard and reflection pool of The Cedar Sanctuary hotel in Kyoto" loading="lazy">
+                <span class="badge-tag">Staff Pick</span>
+              </div>
+              <div class="hotel-card-content">
+                <div>
+                  <div class="hotel-card-header">
+                    <div>
+                      <h2 class="hotel-card-title">
+                        <a href="hotel.html">The Cedar Sanctuary &amp; Spa</a>
+                      </h2>
+                      <div class="hotel-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <span>Higashiyama, Kyoto &bull; 1.2 km from Philosopher&rsquo;s Path</span>
+                      </div>
+                    </div>
+                    
+                    <div class="hotel-rating-badge">
+                      <div class="rating-text">
+                        <strong>Superb</strong>
+                        <span>184 reviews</span>
+                      </div>
+                      <div class="rating-score">9.8</div>
+                    </div>
+                  </div>
+
+                  <p style="margin: 0.5rem 0; font-size: 0.92rem;">
+                    Secluded hillside haven featuring natural hot-spring onsens, cedar-wood suites, handcrafted organic tea service, and acoustic isolation.
+                  </p>
+
+                  <div class="amenities-pills">
+                    <span class="amenity-pill">Thermal Onsen</span>
+                    <span class="amenity-pill">Japanese Breakfast Included</span>
+                    <span class="amenity-pill">Free Cancellation</span>
+                    <span class="amenity-pill">High-Speed Wi-Fi</span>
+                  </div>
+                </div>
+
+                <div class="hotel-card-footer">
+                  <div class="hotel-price-block">
+                    <span class="hotel-price-period">Standard Deluxe &bull; 4 nights</span>
+                    <div class="hotel-price-amount">$340 <small style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-muted);">/ night</small></div>
+                    <span class="hotel-price-total">$1,360 total (Taxes &amp; fees included)</span>
+                  </div>
+
+                  <a href="hotel.html" class="btn btn-primary">
+                    View Details &amp; Rooms
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Hotel Card 2 -->
+            <article class="hotel-card">
+              <div class="hotel-card-media">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=700&q=80" alt="Bright modern guestroom at Kamo River Pavilion with wooden tatami floors and soft lighting" loading="lazy">
+                <span class="badge-tag">Riverside</span>
+              </div>
+              <div class="hotel-card-content">
+                <div>
+                  <div class="hotel-card-header">
+                    <div>
+                      <h2 class="hotel-card-title">
+                        <a href="hotel.html">Kamo River Pavilion</a>
+                      </h2>
+                      <div class="hotel-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <span>Nakagyo Ward, Kyoto &bull; Overlooking Kamo River</span>
+                      </div>
+                    </div>
+                    
+                    <div class="hotel-rating-badge">
+                      <div class="rating-text">
+                        <strong>Exceptional</strong>
+                        <span>240 reviews</span>
+                      </div>
+                      <div class="rating-score">9.6</div>
+                    </div>
+                  </div>
+
+                  <p style="margin: 0.5rem 0; font-size: 0.92rem;">
+                    Boutique riverfront lodge blending contemporary Danish-Japanese aesthetics, quiet library lounge, and morning riverside yoga sessions.
+                  </p>
+
+                  <div class="amenities-pills">
+                    <span class="amenity-pill">River Balcony</span>
+                    <span class="amenity-pill">Specialty Coffee Bar</span>
+                    <span class="amenity-pill">Free Bikes</span>
+                    <span class="amenity-pill">Yoga Studio</span>
+                  </div>
+                </div>
+
+                <div class="hotel-card-footer">
+                  <div class="hotel-price-block">
+                    <span class="hotel-price-period">Riverview King &bull; 4 nights</span>
+                    <div class="hotel-price-amount">$295 <small style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-muted);">/ night</small></div>
+                    <span class="hotel-price-total">$1,180 total (Taxes &amp; fees included)</span>
+                  </div>
+
+                  <a href="hotel.html" class="btn btn-primary">
+                    View Details &amp; Rooms
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Hotel Card 3 -->
+            <article class="hotel-card">
+              <div class="hotel-card-media">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=700&q=80" alt="Traditional Japanese garden walkway leading to Arashiyama Bamboo Ryokan" loading="lazy">
+                <span class="badge-tag">Heritage Ryokan</span>
+              </div>
+              <div class="hotel-card-content">
+                <div>
+                  <div class="hotel-card-header">
+                    <div>
+                      <h2 class="hotel-card-title">
+                        <a href="hotel.html">Arashiyama Bamboo Garden Ryokan</a>
+                      </h2>
+                      <div class="hotel-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <span>Arashiyama, Kyoto &bull; Adjacent to Bamboo Grove</span>
+                      </div>
+                    </div>
+                    
+                    <div class="hotel-rating-badge">
+                      <div class="rating-text">
+                        <strong>Superb</strong>
+                        <span>98 reviews</span>
+                      </div>
+                      <div class="rating-score">9.5</div>
+                    </div>
+                  </div>
+
+                  <p style="margin: 0.5rem 0; font-size: 0.92rem;">
+                    A 120-year-old preserved timber estate with private cypress open-air baths, multi-course kaiseki dining, and moss garden paths.
+                  </p>
+
+                  <div class="amenities-pills">
+                    <span class="amenity-pill">Kaiseki Dinner Included</span>
+                    <span class="amenity-pill">Private Open-Air Bath</span>
+                    <span class="amenity-pill">Moss Garden</span>
+                  </div>
+                </div>
+
+                <div class="hotel-card-footer">
+                  <div class="hotel-price-block">
+                    <span class="hotel-price-period">Tatami Suite &bull; 4 nights</span>
+                    <div class="hotel-price-amount">$410 <small style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-muted);">/ night</small></div>
+                    <span class="hotel-price-total">$1,640 total (Taxes &amp; fees included)</span>
+                  </div>
+
+                  <a href="hotel.html" class="btn btn-primary">
+                    View Details &amp; Rooms
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Hotel Card 4 -->
+            <article class="hotel-card">
+              <div class="hotel-card-media">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=700&q=80" alt="Minimalist hotel bedroom with panoramic window view in Gion" loading="lazy">
+                <span class="badge-tag">Historic Quarter</span>
+              </div>
+              <div class="hotel-card-content">
+                <div>
+                  <div class="hotel-card-header">
+                    <div>
+                      <h2 class="hotel-card-title">
+                        <a href="hotel.html">The Gion Lantern House</a>
+                      </h2>
+                      <div class="hotel-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <span>Gion District, Kyoto &bull; 400m from Yasaka Shrine</span>
+                      </div>
+                    </div>
+                    
+                    <div class="hotel-rating-badge">
+                      <div class="rating-text">
+                        <strong>Very Good</strong>
+                        <span>312 reviews</span>
+                      </div>
+                      <div class="rating-score">9.3</div>
+                    </div>
+                  </div>
+
+                  <p style="margin: 0.5rem 0; font-size: 0.92rem;">
+                    Restored machiya townhouse hotel offering soft lantern lighting, handmade washi paper screens, acoustic glazing, and private tea master sessions.
+                  </p>
+
+                  <div class="amenities-pills">
+                    <span class="amenity-pill">Heritage Machiya</span>
+                    <span class="amenity-pill">Free Tea Ceremonies</span>
+                    <span class="amenity-pill">Central Location</span>
+                  </div>
+                </div>
+
+                <div class="hotel-card-footer">
+                  <div class="hotel-price-block">
+                    <span class="hotel-price-period">Courtyard Room &bull; 4 nights</span>
+                    <div class="hotel-price-amount">$260 <small style="font-size: 0.85rem; font-weight: normal; color: var(--color-text-muted);">/ night</small></div>
+                    <span class="hotel-price-total">$1,040 total (Taxes &amp; fees included)</span>
+                  </div>
+
+                  <a href="hotel.html" class="btn btn-primary">
+                    View Details &amp; Rooms
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Static Pagination / Load More Example -->
+          <div style="text-align: center; margin-top: var(--space-8); padding: var(--space-5); background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg);">
+            <p style="margin-bottom: var(--space-3); font-size: 0.9rem;">You have viewed 4 of 14 curated Kyoto sanctuaries.</p>
+            <a href="hotel.html" class="btn btn-outline">Explore Featured Stay Details</a>
+          </div>
+
+        </section>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:28px; height:28px; color: var(--color-accent);" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Stay<span>Ease</span></span>
+          </a>
+          <p>Thoughtfully curated boutique hotels and sanctuary retreats. Calm, verified, and unhurried reservation experiences.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="results.html">All Destinations</a></li>
+            <li><a href="hotel.html">Featured Retreats</a></li>
+            <li><a href="results.html">Thermal Spas &amp; Onsens</a></li>
+            <li><a href="results.html">Alpine Chalets</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#why-stayease">About StayEase</a></li>
+            <li><a href="index.html#why-stayease">Hospitality Criteria</a></li>
+            <li><a href="reservation.html">Reservation Guarantee</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Reservation Support</h4>
+          <ul class="footer-links">
+            <li><a href="reservation.html">Booking Guide</a></li>
+            <li><a href="hotel.html#policies">Cancellation Policies</a></li>
+            <li><a href="confirmation.html">Sample Itinerary</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 StayEase Hospitality Inc. Pure HTML &amp; CSS Frontend Architecture.
+        </div>
+        <ul class="footer-bottom-links">
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#cookies">Cookie Preferences</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

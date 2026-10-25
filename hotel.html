@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cedar Sanctuary &amp; Spa | Kyoto | StayEase</title>
+  <meta name="description" content="Book The Cedar Sanctuary &amp; Spa in Higashiyama, Kyoto. Mineral hot spring baths, Japanese organic cuisine, and private cedar gardens.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Static Prototype Demonstration Banner -->
+  <aside class="demo-banner" aria-label="Prototype announcement">
+    <div class="demo-banner-content">
+      <span class="demo-tag">HTML &amp; CSS Only</span>
+      <span>Hotel details, photo layout, room selection, and breakdown cards demonstrate pure CSS layout patterns without client-side scripts.</span>
+    </div>
+  </aside>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="StayEase Home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Stay<span>Ease</span></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a href="index.html">Home</a>
+        <a href="results.html">Destinations</a>
+        <a href="results.html">Hotels</a>
+        <a href="#rooms">Room Options</a>
+        <a href="#policies">Policies</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="results.html" class="sign-in-link">&larr; Back to results</a>
+        <a href="reservation.html" class="btn btn-primary btn-sm">Reserve Stay</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- Hotel Header Section -->
+    <div class="container hotel-header-section">
+      <div class="hotel-title-row">
+        <div>
+          <span class="eyebrow">Higashiyama Historic District &bull; 5-Star Boutique</span>
+          <h1 style="margin: 0.25rem 0 0.5rem;">The Cedar Sanctuary &amp; Spa</h1>
+          <div class="hotel-location" style="font-size: 0.95rem;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span>34-2 Nanzenji-Kitanobocho, Sakyo Ward, Kyoto 606-8435, Japan</span>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: var(--space-3);">
+          <div class="hotel-rating-badge">
+            <div class="rating-text">
+              <strong style="font-size: 0.95rem;">Exceptional Sanctuary</strong>
+              <span>184 verified reviews</span>
+            </div>
+            <div class="rating-score" style="font-size: 1.15rem; padding: 6px 12px;">9.8</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Responsive Photo Gallery Grid -->
+      <section class="hotel-gallery-grid" aria-label="Hotel photo gallery">
+        <figure class="gallery-item gallery-item-featured">
+          <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80" alt="Main pavilion of The Cedar Sanctuary illuminated at twilight with peaceful garden reflections" width="800" height="440">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Interior of the Cedar Garden Suite with king bed and floor-to-ceiling forest view" width="400" height="210">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" alt="Private cedar hinoki soaking tub overlooking moss garden rocks" width="400" height="210">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="Outdoor natural thermal spring bath surrounded by ancient pines" width="400" height="210">
+        </figure>
+        <figure class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Traditional Japanese breakfast set featuring seasonal dishes and matcha tea" width="400" height="210">
+        </figure>
+      </section>
+
+      <!-- Main Layout: Content and Sticky Booking Summary -->
+      <div class="details-main-layout">
+        
+        <!-- Details Content Area -->
+        <div class="details-content-column">
+          
+          <!-- Hotel Overview & Description -->
+          <section aria-labelledby="about-hotel-heading" style="margin-bottom: var(--space-8);">
+            <h2 id="about-hotel-heading" style="margin-bottom: var(--space-3);">About this sanctuary</h2>
+            <p class="lead" style="margin-bottom: var(--space-4);">
+              Concealed at the base of Kyoto&rsquo;s forested eastern mountains, The Cedar Sanctuary is a masterwork of sustainable Japanese carpentry and acoustic tranquility.
+            </p>
+            <p style="margin-bottom: var(--space-4);">
+              Constructed using salvaged Yoshino cedar wood and traditional joinery without metal nails, the hotel merges contemporary comforts with the timeless rituals of Japanese bathing. Guests awaken to the gentle chimes of nearby Nanzen-ji temple, followed by handcrafted breakfasts made from organic produce grown in the Kameoka valley.
+            </p>
+            <p>
+              Each suite is acoustically treated to preserve quiet reflection, featuring private open-air hinoki wood tubs, woven tatami rest zones, and custom natural-fiber bedding designed for deep, restorative sleep.
+            </p>
+          </section>
+
+          <!-- Amenities Section -->
+          <section aria-labelledby="amenities-heading" style="margin-bottom: var(--space-8);">
+            <h2 id="amenities-heading">Property Amenities</h2>
+            <div class="amenities-full-grid">
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Natural Thermal Onsen</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                <span>Complimentary Breakfast</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.393 9.393c5.857-5.857 15.355-5.857 21.213 0"/></svg>
+                <span>Fiber Optical Wi-Fi</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+                <span>Tea Ceremony Lounge</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Holistic Herbal Spa</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                <span>Climate Control &amp; HEPA</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                <span>Cypress Soaking Tubs</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+                <span>Private Valet Service</span>
+              </div>
+              <div class="amenity-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+                <span>24/7 Guest Concierge</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Room Options Section -->
+          <section id="rooms" aria-labelledby="rooms-heading" style="margin-bottom: var(--space-8);">
+            <h2 id="rooms-heading" style="margin-bottom: var(--space-4);">Available Suites &amp; Rooms</h2>
+            
+            <!-- Room 1 -->
+            <article class="room-card">
+              <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Cedar Garden Suite bedroom with views of private moss rock garden" loading="lazy">
+              </div>
+              <div class="room-details">
+                <h4>Cedar Garden Suite</h4>
+                <div class="room-specs">
+                  <span>45 m&sup2; (484 sq ft)</span>
+                  <span>1 King Bed</span>
+                  <span>Max 2 Guests</span>
+                  <span>Garden View</span>
+                </div>
+                <p style="font-size: 0.88rem; margin-bottom: 0.5rem;">
+                  Private cedar soaking tub, soundproof acoustic wall panels, washi paper lanterns, and direct sliding door access to a quiet moss garden.
+                </p>
+                <div class="amenities-pills">
+                  <span class="amenity-pill">Free Cancellation</span>
+                  <span class="amenity-pill">Breakfast Included</span>
+                </div>
+              </div>
+              <div class="room-price-col">
+                <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--color-accent);">$340 <small style="font-size: 0.8rem; font-weight: normal; color: var(--color-text-muted);">/ night</small></div>
+                <span style="font-size: 0.78rem; color: var(--color-text-muted);">$1,360 total (4 nights)</span>
+                <a href="reservation.html" class="btn btn-primary btn-sm">Reserve Suite</a>
+              </div>
+            </article>
+
+            <!-- Room 2 -->
+            <article class="room-card">
+              <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80" alt="Mountain View Onsen Terrace Deluxe with wooden sun lounger and mineral bath" loading="lazy">
+              </div>
+              <div class="room-details">
+                <h4>Onsen Terrace Deluxe</h4>
+                <div class="room-specs">
+                  <span>58 m&sup2; (624 sq ft)</span>
+                  <span>1 Super King</span>
+                  <span>Max 2 Guests</span>
+                  <span>Mountain View</span>
+                </div>
+                <p style="font-size: 0.88rem; margin-bottom: 0.5rem;">
+                  Outdoor mineral hot-spring bath on a secluded cedar terrace with unobstructed views of the Higashiyama peaks.
+                </p>
+                <div class="amenities-pills">
+                  <span class="amenity-pill">Private Outdoor Bath</span>
+                  <span class="amenity-pill">Kaiseki Tea Set</span>
+                </div>
+              </div>
+              <div class="room-price-col">
+                <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--color-accent);">$440 <small style="font-size: 0.8rem; font-weight: normal; color: var(--color-text-muted);">/ night</small></div>
+                <span style="font-size: 0.78rem; color: var(--color-text-muted);">$1,760 total (4 nights)</span>
+                <a href="reservation.html" class="btn btn-primary btn-sm">Reserve Suite</a>
+              </div>
+            </article>
+
+            <!-- Room 3 -->
+            <article class="room-card">
+              <div class="room-image">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Heritage Tatami Master Villa with sliding shoji doors and handcrafted woodwork" loading="lazy">
+              </div>
+              <div class="room-details">
+                <h4>Heritage Tatami Master Villa</h4>
+                <div class="room-specs">
+                  <span>72 m&sup2; (775 sq ft)</span>
+                  <span>2 Tatami Futons + 1 King</span>
+                  <span>Max 4 Guests</span>
+                  <span>Forest Court</span>
+                </div>
+                <p style="font-size: 0.88rem; margin-bottom: 0.5rem;">
+                  Dual-room pavilion with historic alcoves, antique ceramics, private dining veranda, and personal attendant for tea preparations.
+                </p>
+                <div class="amenities-pills">
+                  <span class="amenity-pill">Private Pavilion</span>
+                  <span class="amenity-pill">Dedicated Tea Master</span>
+                </div>
+              </div>
+              <div class="room-price-col">
+                <div style="font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--color-accent);">$520 <small style="font-size: 0.8rem; font-weight: normal; color: var(--color-text-muted);">/ night</small></div>
+                <span style="font-size: 0.78rem; color: var(--color-text-muted);">$2,080 total (4 nights)</span>
+                <a href="reservation.html" class="btn btn-primary btn-sm">Reserve Villa</a>
+              </div>
+            </article>
+          </section>
+
+          <!-- Hotel Policies Section -->
+          <section id="policies" class="policy-card" aria-labelledby="policies-heading">
+            <h3 id="policies-heading">Important Stay Policies &amp; Guidelines</h3>
+            <div class="policy-list">
+              <div class="policy-item">
+                <strong>Check-in &amp; Check-out:</strong>
+                <div>Check-in is from 3:00 PM to 9:00 PM. Check-out is by 11:00 AM. Early check-in or late luggage storage is complimentary.</div>
+              </div>
+              <div class="policy-item">
+                <strong>Cancellation Policy:</strong>
+                <div>Full refund if cancelled up to 48 hours prior to local check-in time (by 3:00 PM, Oct 22, 2026).</div>
+              </div>
+              <div class="policy-item">
+                <strong>Tranquility Hours:</strong>
+                <div>To preserve peaceful sleep for all travelers, quiet hours are observed throughout public grounds and hallways between 10:00 PM and 7:00 AM.</div>
+              </div>
+              <div class="policy-item">
+                <strong>Onsen Etiquette:</strong>
+                <div>Traditional thermal bathing rules apply. Tattoo coverings are provided compliantly upon request for public baths, or guests may use their private suite baths anytime.</div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <!-- Sticky Booking Summary Widget Sidebar -->
+        <aside aria-label="Booking summary and reservation link">
+          <div class="booking-summary-card">
+            
+            <div class="booking-price-header">
+              <span class="rate">$340</span>
+              <span style="color: var(--color-text-muted); font-size: 0.92rem;">/ night</span>
+            </div>
+
+            <div style="background-color: var(--color-surface-subtle); padding: var(--space-4); border-radius: var(--radius-md); margin-bottom: var(--space-4); border: 1px solid var(--color-border-subtle);">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-2); margin-bottom: var(--space-3); font-size: 0.85rem;">
+                <div>
+                  <span style="display: block; font-weight: 700; color: var(--color-brand-deep); text-transform: uppercase; font-size: 0.72rem;">Check-in</span>
+                  <strong>Oct 24, 2026</strong>
+                </div>
+                <div>
+                  <span style="display: block; font-weight: 700; color: var(--color-brand-deep); text-transform: uppercase; font-size: 0.72rem;">Check-out</span>
+                  <strong>Oct 28, 2026</strong>
+                </div>
+              </div>
+              <div style="font-size: 0.85rem; border-top: 1px solid var(--color-border); padding-top: var(--space-2);">
+                <span style="display: block; font-weight: 700; color: var(--color-brand-deep); text-transform: uppercase; font-size: 0.72rem;">Guests &amp; Room</span>
+                <strong>2 Adults &bull; Cedar Garden Suite</strong>
+              </div>
+            </div>
+
+            <div class="price-breakdown-list">
+              <div class="breakdown-row">
+                <span>$340 &times; 4 nights</span>
+                <span>$1,360.00</span>
+              </div>
+              <div class="breakdown-row">
+                <span>Artisanal breakfast (included)</span>
+                <span style="color: var(--color-success); font-weight: 600;">$0.00</span>
+              </div>
+              <div class="breakdown-row">
+                <span>Onsen wellness fee</span>
+                <span style="color: var(--color-success); font-weight: 600;">$0.00 (Waived)</span>
+              </div>
+              <div class="breakdown-row">
+                <span>Kyoto municipal stay tax (10%)</span>
+                <span>$136.00</span>
+              </div>
+              <div class="breakdown-row total">
+                <span>Estimated Total</span>
+                <span style="color: var(--color-accent); font-size: 1.35rem;">$1,496.00</span>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-5);">
+              <a href="reservation.html" class="btn btn-primary btn-block btn-lg">
+                Proceed to Reservation
+              </a>
+            </div>
+
+            <div style="text-align: center; margin-top: var(--space-4); font-size: 0.8rem; color: var(--color-text-muted); line-height: 1.4;">
+              <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display: inline; vertical-align: middle; margin-right: 2px;" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              No payment is collected at this step. Static prototype demonstration.
+            </div>
+
+          </div>
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:28px; height:28px; color: var(--color-accent);" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <span>Stay<span>Ease</span></span>
+          </a>
+          <p>Thoughtfully curated boutique hotels and sanctuary retreats. Calm, verified, and unhurried reservation experiences.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="results.html">All Destinations</a></li>
+            <li><a href="hotel.html">Featured Retreats</a></li>
+            <li><a href="results.html">Thermal Spas &amp; Onsens</a></li>
+            <li><a href="results.html">Alpine Chalets</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#why-stayease">About StayEase</a></li>
+            <li><a href="index.html#why-stayease">Hospitality Criteria</a></li>
+            <li><a href="reservation.html">Reservation Guarantee</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Reservation Support</h4>
+          <ul class="footer-links">
+            <li><a href="reservation.html">Booking Guide</a></li>
+            <li><a href="#policies">Cancellation Policies</a></li>
+            <li><a href="confirmation.html">Sample Itinerary</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 StayEase Hospitality Inc. Pure HTML &amp; CSS Frontend Architecture.
+        </div>
+        <ul class="footer-bottom-links">
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#cookies">Cookie Preferences</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
